@@ -1,0 +1,782 @@
+CURRENT CODE FOR ExperienceCard.tsx
+
+import React from 'react'
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+
+type Props = {}
+
+export default function ExperienceCard({}: Props) {
+  return (
+  <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
+                      w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10
+                      hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200
+                      overflow-hidden'>
+        <motion.div 
+    initial={{y:-100,opacity:0,}}
+    animate={{opacity:1, y:0}}
+    transition={{duration:1.2}}
+    >
+    <Image
+        className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
+        src="/images/logo.jpg"
+        alt=""
+        width={223} // specify the width
+        height={181} // and the height
+      />
+  </motion.div> *
+
+    {/*<motion.img 
+    initial={{y:-100,opacity:0,}}
+    animate={{opacity:1, y:0}}
+    transition={{duration:1.2}}
+    
+    className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
+src="/images/logo.jpg" alt="" /> */}
+
+
+    <div className='px-0 md:px-10'>
+        <h4 className='text-4xl font-light'>VP of Photography</h4>
+        <p className='font-bold text-2xl mt-1'>Metropolitan Data Science Assoication</p>
+        <div className='flex space-x-2 my-2'>
+        <Image 
+            className='h-10 w-10 rounded-full object-cover'
+            src="/images/techused1.png"
+            alt="photoshop"
+            width={200} // specify the width
+            height={200} // and the height
+            />
+            <Image 
+            className='h-10 w-10 rounded-full object-cover'
+            src="/images/techused2.png"
+            alt="photoshop"
+            width={200} // specify the width
+            height={200} // and the height
+            />
+            <Image 
+            className='h-10 w-10 rounded-full object-cover'
+            src="/images/techused3.png"
+            alt="photoshop"
+            width={200} // specify the width
+            height={200} // and the height 
+            // MIGHT GET RID OF THIS AREA DEPENDING ON HOW THIS WILL LOOK
+            />
+        </div>
+        <p className='uppercase py-5 text-gray-300'>Started and ended </p>
+
+        <ul className='list-disc space-y-4 ml-5 text-lg  h-[200px]'>
+            <li>These will be changed later</li>
+            <li>Summary points for job, Summary points for job</li>
+            <li>Summary points for job, Summary points for job</li>
+        </ul>
+    </div>
+
+  </article>
+  )
+  
+}
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+REPLACEMENT CODE IN THIS SANITY DOES NOT WORK OUT : WorkExperience.tsx 
+
+import React from "react";
+import { motion } from "framer-motion";
+import ExperienceCard from "./ExperienceCard";
+
+type Props = {};
+
+function WorkExperience({}: Props) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center"
+    >
+      <h3 className="absolute top-24  uppercase tracking-[20px] text-gray-500 text-2xl">
+        Experience
+      </h3>
+
+      <div className="w-full flex space-x-5 overflow-x-scroll snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]">
+        <ExperienceCard
+          title={"VP of Photography"}
+          company={"Metropolitan Data University"}
+          imageSrc={"/images/logo.jpg"}
+          techUsed={[
+            "/images/techused3.png",
+            "/images/techused1.png",
+            "/images/techused2.png",
+          ]}
+          startDate={"August 2023"}
+          endDate={"Present"}
+          summaryPoints={[
+            "Took headshots for the team",
+            "Made edits with photoshop",
+          ]}
+        />
+        <ExperienceCard
+          title={"VP of Photography"}
+          company={"Metropolitan Data University"}
+          imageSrc={"/images/logo.jpg"}
+          techUsed={[
+            "/images/techused3.png",
+            "/images/techused1.png",
+            "/images/techused2.png",
+          ]}
+          startDate={"August 2023"}
+          endDate={"Present"}
+          summaryPoints={[
+            "Took headshots for the team",
+            "Made edits with photoshop",
+          ]}
+        />
+      </div>
+    </motion.div>
+  );
+}
+
+export default WorkExperience;
+
+--------------------------------------------------------------------------------------------------------------------
+REPLACEMENT CODE IN THIS SANITY DOES NOT WORK OUT : ExperienceCard.tsx 
+
+import React from 'react'
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+
+type Props = {
+  title: string,
+  company: string,
+  imageSrc: string,
+  techUsed: string[],
+  startDate: string,
+  endDate: string,
+  summaryPoints: string[]
+}
+
+export default function ExperienceCard({title, company, imageSrc, techUsed, startDate, endDate, summaryPoints}: Props) {
+  return (
+  <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
+                      w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10
+                      hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200
+                      overflow-hidden'>
+        <motion.div 
+    initial={{y:-100,opacity:0,}}
+    animate={{opacity:1, y:0}}
+    transition={{duration:1.2}}
+    >
+    <Image
+        className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
+        src={imageSrc}
+        alt=""
+        width={223} // specify the width
+        height={181} // and the height
+      />
+  </motion.div> 
+
+    <div className='px-0 md:px-10'>
+        <h4 className='text-4xl font-light'>{title}</h4>
+        <p className='font-bold text-2xl mt-1'>{company}</p>
+        <div className='flex space-x-2 my-2'>
+        {techUsed.map((tech, index) => (
+            <Image 
+                key={index}
+                className='h-10 w-10 rounded-full object-cover'
+                src={tech}
+                alt="tech"
+                width={200} // specify the width
+                height={200} // and the height
+            />
+        ))}
+        </div>
+        <p className='uppercase py-5 text-gray-300'>Started: {startDate} | Ended: {endDate}</p>
+
+        <ul className='list-disc space-y-4 ml-5 text-lg  h-[200px]'>
+            {summaryPoints.map((point, index) => (
+                <li key={index}>{point}</li>
+            ))}
+        </ul>
+    </div>
+
+  </article>
+  )
+}
+
+
+------------------------------------------------------------------------------------------------------------
+Skill.tsx WITHOUT USING next/images
+
+import React from "react";
+import { motion } from "framer-motion";
+
+type Props = {
+  directionLeft?: boolean;
+};
+
+function Skill({ directionLeft }: Props) {
+  return (
+    <div className="group relative flex cursor-pointer">
+      <motion.img
+        className="rounded-full border border-gray-500 object-cover w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
+        initial={{
+          x: directionLeft ? -200 : 200,
+          opacity: 0,
+        }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        src="/images/techused1.png"
+      />
+
+      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0">
+        <div className="flex items-center justify-center h-full">
+            <p className="text-3xl font-bold text-black opacity-100">100%</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+  );
+}
+
+export default Skill;
+
+------------------------------------------------------------------------------------------------------------
+Current code on skill.tsx using next/images
+
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+type Props = {
+  directionLeft?: boolean;
+};
+
+function Skill({ directionLeft }: Props) {
+  return (
+    <div className="group relative flex cursor-pointer">
+      <motion.div
+        initial={{
+          x: directionLeft ? -200 : 200,
+          opacity: 0,
+        }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, x: 0 }}
+      >
+        <div className="rounded-full overflow-hidden border border-gray-500 w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out">
+        <Image
+          src="/images/techused1.png"
+          alt="tech used"
+          width={200} // specify the width
+          height={200} // and the height
+        />
+
+        </div>
+      </motion.div>
+
+      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0">
+        <div className="flex items-center justify-center h-full">
+          <p className="text-3xl font-bold text-black opacity-100">100%</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Skill;
+
+------------------------------------------------------------------------------------------------------------
+THIS IS REPLACEMENT CODE IF SANITY DOES NOT WORK - Skills.tsx
+
+import React from "react";
+import { motion } from "framer-motion";
+import Skill from "./Skill";
+
+type Props = {};
+
+function Skills({}: Props) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px]
+      xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center "
+    >
+      <h3 className="absolute top-24  uppercase tracking-[20px] text-gray-500 text-2xl">
+        Skills
+      </h3>
+
+      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
+        Hover over a skill for current proficiency{" "}
+      </h3>
+
+      <div className="grid grid-cols-4 gap-5">
+        <Skill imageSRC={"/images/techused1.png"} skillPercentage={"75%"} />
+        <Skill imageSRC={"/images/techused3.png"} skillPercentage={"100%"} />
+        <Skill imageSRC={"/images/techused2.png"} skillPercentage={"88%"} />
+        <Skill imageSRC={"/images/techused4.png"} skillPercentage={"88%"} />
+        <Skill imageSRC={"/images/techused4.png"} skillPercentage={"88%"} />
+        
+        
+        
+        
+      </div>
+    </motion.div>
+  );
+}
+
+export default Skills;
+
+------------------------------------------------------------------------------------------------------------
+REPLACEMENT CODE IF SANITY DOES NOT WORK - Skill.tsx
+
+
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+type Props = {
+  directionLeft?: boolean;
+  imageSRC: string;
+  skillPercentage: string;
+};
+
+function Skill({ directionLeft, imageSRC, skillPercentage }: Props) {
+  return (
+    <div className="group relative flex cursor-pointer">
+      <motion.div
+        initial={{
+          x: directionLeft ? -200 : 200,
+          opacity: 0,
+        }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, x: 0 }}
+      >
+        <div className="flex place-items-center rounded-full overflow-hidden w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out">
+        <Image
+          src= {imageSRC}
+          alt="tech used"
+          width={200} // specify the width
+          height={200} // and the height
+          
+        />
+
+        </div>
+      </motion.div>
+
+      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0">
+        <div className="flex items-center justify-center h-full">
+          <p className="text-3xl font-bold text-black opacity-100">{skillPercentage}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Skill;
+
+------------------------------------------------------------------------------------------------------------
+CURRENT CODE FOR Projects.tsx
+
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+type Props = {};
+
+function Projects({}: Props) {
+  const projects = [1, 2, 3, 4, 5];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+    >
+      <h3 className="absolute top-24  uppercase tracking-[20px] text-gray-500 text-2xl">
+        Photography Projects
+      </h3>
+
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 ">
+        {projects.map((project, i) => (
+          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
+            <motion.div
+              initial={{ y: -100, opacity: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5 }}
+              viewport={{ once: true }}
+              className="overflow-hidden w-[200px] h-[300px] md:w-[300px] md:h-[500px] object-cover lg:w-[500px] lg:h-[800px] flex justify-center items-center"
+            >
+              <Image
+                src="/images/project1.jpg"
+                alt="project"
+                width={400} // specify the width
+                height={1000} // and the height
+              />
+            </motion.div>
+            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+              <h4 className="text-4xl font-semibold text-center">
+                <span className="underline decoration-white/50">
+                  Project {i + 1} of {projects.length}:
+                </span>{" "}
+                Headshots{" "}
+              </h4>
+              <p className="text-lg text-center">
+                Taken headshots for multiple different student groups and just
+                have fun with it
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+    </motion.div>
+  );
+}
+
+export default Projects;
+
+------------------------------------------------------------------------------------------------------------
+CODE IN CASE SANITY DOES NOT WORK - Projects.tsx
+
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+type Project = {
+  imageSrc: string;
+  title: string;
+  description: string;
+  Link: string;
+};
+
+type Props = {};
+
+function Projects({}: Props) {
+  const projects: Project[] = [
+    {
+      imageSrc: "/images/project1.jpg",
+      title: "Project 1",
+      description:
+        "Taken headshots for multiple different student groups and just have fun with it",
+      Link: "https://drive.google.com/drive/folders/15obCDVCXddKZvEEK6P3zKFmAfPyXkv-m?usp=share_link",
+    },
+    {
+      imageSrc: "/images/project2.jpg",
+      title: "Project2",
+      description:
+        "dope shit right here and im adding more shit to do so keep on waiting big dawg and whatever else this may be",
+      Link: "https://drive.google.com/drive/folders/15obCDVCXddKZvEEK6P3zKFmAfPyXkv-m?usp=share_link",
+    },
+  ];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+    >
+      <h3 className="absolute top-24  uppercase tracking-[20px] text-gray-500 text-2xl pl-4">
+        Photography
+      </h3>
+
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 ">
+        {projects.map((project, i) => (
+          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
+            <motion.div
+              initial={{ y: -100, opacity: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5 }}
+              viewport={{ once: true }}
+              className="overflow-hidden w-[200px] h-[300px] md:w-[300px] md:h-[500px] object-cover lg:w-[500px] lg:h-[800px] flex justify-center items-center"
+            >
+              <Image
+                src={project.imageSrc}
+                alt={project.title}
+                width={400} // specify the width
+                height={1000} // and the height
+              />
+            </motion.div>
+            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+              <h4 className="text-4xl font-semibold text-center">
+                <span className="underline decoration-white/50">
+                  {project.title}
+                </span>{" "}
+              </h4>
+              <p className="text-lg text-center">{project.description}</p>
+              <a
+                className="px-6 py-2 border border-[#242424] uppercase text-xs tracking-widest
+                text-gray-600 transition-all
+                hover:border-[#F7AB0A]/40
+                hover:text-[#F7AB0A]/40
+                text-center flex justify-center"
+                href={project.Link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View more
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+    </motion.div>
+  );
+}
+
+export default Projects;
+
+
+------------------------------------------------------------------------------------------------------------
+Header.tsx code
+
+import React from "react";
+import React from "react";
+import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+type Props = {};
+
+export default function Header({}: Props) {
+  return (
+    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+      <motion.div
+        initial={{
+          x: -500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex flex-row items-center"
+      >
+        {/*Social Icons*/}
+        <SocialIcon
+          className="hover:opacity-40 opacity-100 transition-opacity duration-200"
+          url="https://github.com/manavparmar04"
+          fgColor="gray"
+          bgColor="transparent"
+          target="_blank"
+        />
+
+        <SocialIcon
+          className="hover:opacity-40 opacity-100 transition-opacity duration-200"
+          url="https://www.youtube.com/results?search_query=mr+beast"
+          fgColor="gray"
+          bgColor="transparent"
+          target="_blank"
+        />
+        <SocialIcon
+          className="hover:opacity-40 opacity-100 transition-opacity duration-200"
+          url="https://www.instagram.com/manav.04/"
+          fgColor="gray"
+          bgColor="transparent"
+          target="_blank"
+        />
+        <SocialIcon
+          className="hover:opacity-40 opacity-100 transition-opacity duration-200"
+          url="https://www.linkedin.com/in/manav-parmar-039a24248/"
+          fgColor="gray"
+          bgColor="transparent"
+          target="_blank"
+        />
+        <SocialIcon
+          className="hover:opacity-40 opacity-100 transition-opacity duration-200"
+          url="https://www.instagram.com/manav.04/"
+          fgColor="gray"
+          bgColor="transparent"
+          target="_blank"
+        />
+      </motion.div>
+
+        <motion.div
+          initial={{
+            x: 500,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+          className="flex flex-row items-center text-gray-300 cursor-pointer"
+        >
+          <SocialIcon
+            className="cursor-pointer hover:opacity-40 opacity-100 transition-opacity duration-200"
+            network="email"
+            fgColor="gray"
+            bgColor="transparent"
+            target="_blank"
+          />
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400 hover:opacity-40 opacity-100 transition-opacity duration-200">
+            Get in touch
+          </p>
+        </motion.div>
+    </header>
+  );
+}
+
+
+------------------------------------------------------------------------------------------------------------
+
+ORIGINAL CODE FROM Hero.tsx
+
+import React from 'react'
+import {Cursor, useTypewriter} from 'react-simple-typewriter'
+import BackgroundCircles from './BackgroundCircles'
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+
+
+
+
+type Props = {}
+
+export default function Hero({}: Props) {
+    const [text, count] = useTypewriter({
+        words: [
+            "Hi, my name is Manav Parmar",
+            "I'm a Computer Science Student",
+            "I enjoy Photography",
+            /* This can be changed later */
+        ],
+        loop: true,
+        delaySpeed: 2000, 
+    })
+    return( 
+        <motion.div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+        <BackgroundCircles/>  {/* This can be changed later */}
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+        >
+            <Image
+                src="/images/pfp.JPEG"
+                alt="Profile picture of the starting screen"
+                width={500} // specify the width
+                height={500} // and the height
+                className="rounded-full h-32 w-32 mx-auto object-cover object-center"
+            />
+        </motion.div>
+    
+        <div className='z-20'>   {/* Made Z greater than 0 to bring up the layer, almost like putting this layer ahead of the background*/}
+            <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>Computer Scientist</h2>
+            <h1 className='text-5xl lg:text6xl font-semibold px-10'>
+                <span className='mr-3'>{text}</span>
+                <Cursor cursorColor='#F7AB0A'/>
+            </h1>
+
+            <div className='pt-5'>
+                
+
+                <Link href= "#about">
+                    <button className='heroButton'>About</button>
+                </Link>
+
+                <Link href= "#experience">
+                    <button className='heroButton'>Experience</button>
+                </Link>
+
+                <Link href= "#skills">
+                    <button className='heroButton'>Skills</button>
+                </Link>
+
+                <Link href= "#projects" >
+                    <button className='heroButton'>Projects</button>
+                </Link> 
+
+                <Link href= "#contact">
+                    <button className='heroButton'>Contact</button>
+                </Link>
+
+                
+
+            
+            </div>
+
+
+        </div>
+    
+    </motion.div>
+    )
+}
+
+------------------------------------------------------------------------------------------------------------
+Current header.tsx code with the changes made
+
+import React from "react";
+import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+type Props = {};
+
+export default function Header({}: Props) {
+  return (
+    <header className="sticky top-0 p-5 flex items-center justify-center max-w-7xl mx-auto z-20 xl:items-center sm:text-size">
+      
+
+      <motion.div
+        initial={{
+          x: 500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex flex-row items-center text-gray-300 cursor-pointer"
+      >
+        <Link href="#about">
+          <button className="heroButton">About</button>
+        </Link>
+
+        <Link href="#experience">
+          <button className="heroButton">Experience</button>
+        </Link>
+
+        <Link href="#skills">
+          <button className="heroButton">Skills</button>
+        </Link>
+
+        <Link href="#projects">
+          <button className="heroButton">Projects</button>
+        </Link>
+
+        <Link href="#contact">
+          <button className="heroButton">Contact</button>
+        </Link>
+      </motion.div>
+    </header>
+  );
+}
+
+------------------------------------------------------------------------------------------------------------
