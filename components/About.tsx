@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 type Props = {};
 
@@ -29,15 +30,20 @@ export default function About({}: Props) {
         About
       </h3>
 
-      <motion.img
+      <motion.div
         key={currentImage}
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
-        src={currentImage}
-        className="-mb-8 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-100 md:h-200 xl:w-[500px] xl:h-[600px] p-4"
-      />   {/* To change small images to cirlce change w-56 and h-56 */}
-    
+      >
+        <Image
+          src={currentImage}
+          alt="Current Image"
+          width={200} // replace with your desired width
+          height={300} // replace with your desired height
+          className="-mb-8 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[3500px] md:h-[500px] xl:w-[3800px] xl:h-[600px] p-4"
+        />
+      </motion.div>
 
       <div className="px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
@@ -46,7 +52,7 @@ export default function About({}: Props) {
 
         <motion.p
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
           className="text-base p-4 space-y-10"
         >
@@ -57,9 +63,7 @@ export default function About({}: Props) {
           things to the next level by offering my services to others. The images
           you see on this page are just a small sample of my work. There’s a
           whole page dedicated to showcasing my photography, so feel free to
-          explore and enjoy!
-          
-           If you have any inquiries, want to connect, or just
+          explore and enjoy! If you have any inquiries, want to connect, or just
           fancy a chat, don’t hesitate to reach out! You can contact me through
           my social media platforms or send me an email. You’ll find all the
           necessary details on the contact page below. I look forward to hearing
