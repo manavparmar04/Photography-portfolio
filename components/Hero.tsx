@@ -13,7 +13,6 @@ export default function Hero({}: Props) {
       "Welcome to MP's Photography",
       "Capturing Moments One Click at a Time",
       "Bringing Life to Photos",
-      "LOLOL",
       /* This can be changed later */
     ],
     loop: true,
