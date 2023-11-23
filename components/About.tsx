@@ -17,7 +17,7 @@ export default function About({}: Props) {
       setCurrentImage(
         images[(images.indexOf(currentImage) + 1) % images.length]
       );
-    }, 5000); // Changing speed of the image showing up (5 seconds rn)
+    }, 8000); // Changing speed of the image showing up (5 seconds rn)
     return () => clearInterval(timer);
   }, [currentImage]);
 
@@ -33,7 +33,7 @@ export default function About({}: Props) {
         key={currentImage}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 8 }}
+        transition={{ duration: 3 }}
         src={currentImage}
         className="-mb-8 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-100 md:h-200 xl:w-[500px] xl:h-[600px] p-4"
       />   {/* To change small images to cirlce change w-56 and h-56 */}
