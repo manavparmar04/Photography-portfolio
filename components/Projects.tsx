@@ -59,7 +59,7 @@ function Projects({}: Props) {
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] ">
         {projects.map((project, i) => (
-          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-5 md:p-44 h-screen">
+          <div key = {i} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-5 md:p-44 h-screen">
             <motion.div
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
