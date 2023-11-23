@@ -27,8 +27,8 @@ export default function Hero({}: Props) {
         transition={{ duration: 1.5 }}
       >
         <Image
-          src="/images/pfp.JPEG"
-          alt="Profile picture of the starting screen"
+          src="/images/hero.JPG"
+          alt=""
           width={500} // specify the width
           height={500} // and the height
           className="rounded-full h-32 w-32 mx-auto object-cover object-center"
