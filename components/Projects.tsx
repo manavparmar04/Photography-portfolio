@@ -51,7 +51,6 @@ function Projects({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-center mx-auto items-center z-0 scrollbar-thin"
-      
     >
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl pl-5 pt-1">
         Photography
@@ -59,7 +58,10 @@ function Projects({}: Props) {
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] ">
         {projects.map((project, i) => (
-          <div key = {i} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-5 md:p-44 h-screen">
+          <div
+            key={i}
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-5 md:p-44 h-screen"
+          >
             <motion.div
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ opacity: 1, y: 0 }}

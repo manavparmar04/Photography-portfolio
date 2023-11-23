@@ -99,42 +99,34 @@ function ContactMe({}: Props) {
           </button>
         </form>
 
-        <div className="flex justify-center items-center">
-          <SocialIcon
-            className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-            url="https://github.com/manavparmar04"
-            fgColor="gray"
-            bgColor="transparent"
-            target="_blank"
-          />
-          {/*<SocialIcon
-            className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-            url="https://www.youtube.com/results?search_query=mr+beast"
-            fgColor="gray"
-            bgColor="transparent"
-            target="_blank"
-          /> */}
-
-          <SocialIcon
-            className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-            url="https://www.instagram.com/manav.04/"
-            fgColor="gray"
-            bgColor="transparent"
-            target="_blank"
-          />
-          <SocialIcon
-            className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-            url="https://www.linkedin.com/in/manav-parmar-039a24248/"
-            fgColor="gray"
-            bgColor="transparent"
-            target="_blank"
-          />
-        </div>
-        <div className="flex justify-center items-center animate-pulse">
-          <Link href="#hero">
-            <button className="heroButton">Return to Top</button>
-          </Link>
-        </div>
+        <div className="flex flex-row justify-center sm:flex-col items-center  sm:space-y-0 sm:space-x-4 animate-pulse">
+  <div className="flex justify-center items-center">
+    <SocialIcon
+      className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
+      url="https://github.com/manavparmar04"
+      fgColor="gray"
+      bgColor="transparent"
+      target="_blank"
+    />
+    <SocialIcon
+      className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
+      url="https://www.instagram.com/manav.04/"
+      fgColor="gray"
+      bgColor="transparent"
+      target="_blank"
+    />
+    <SocialIcon
+      className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
+      url="https://www.linkedin.com/in/manav-parmar-039a24248/"
+      fgColor="gray"
+      bgColor="transparent"
+      target="_blank"
+    />
+  </div>
+  <Link href="#hero">
+    <button className="heroButton">Return to Top</button>
+  </Link>
+</div>
       </div>
     </div>
   );
