@@ -5,7 +5,7 @@ import Image from "next/image";
 type Props = {};
 
 export default function About({}: Props) {
-  const [currentImage, setCurrentImage] = useState("/images/pfp.JPEG");
+  const [currentImage, setCurrentImage] = useState("/images/aboutt.JPEG");
   const images = [
     "/images/about1.JPEG",
     "/images/about2.JPEG",
@@ -23,7 +23,7 @@ export default function About({}: Props) {
   }, [currentImage]);
 
   return (
-    <div className="h-screen flex flex-col relative text-center md:text-center md:flex-row max-w-7xl px-1 justify-end mx-auto items-center ">
+    <div className="h-screen flex flex-col relative text-center md:text-center md:flex-row max-w-7xl px-1 justify-center mx-auto items-center ">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl pb-3">
         {" "}
         {/* Change to justify-center to center about */}
