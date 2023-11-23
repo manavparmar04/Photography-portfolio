@@ -61,9 +61,9 @@ function ContactMe({}: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-1 w-fit mx-auto pt-5"
+          className="flex flex-col space-y-3   w-full md:w-auto mx-auto pt-3"
         >
-          <div className="flex space-x-2">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
             <input
               {...register("name")}
               placeholder="Full Name"
@@ -98,6 +98,7 @@ function ContactMe({}: Props) {
             Submit
           </button>
         </form>
+
         <div className="flex justify-center items-center">
           <SocialIcon
             className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
