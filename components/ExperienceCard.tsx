@@ -10,6 +10,13 @@ type Props = {
   startDate: string;
   endDate: string;
   summaryPoints: string[];
+  imageWidth: string;
+  imageHeight: string;
+  smWidth: string;
+  smHeight:string;
+
+ 
+
 };
 
 export default function ExperienceCard({
@@ -20,6 +27,11 @@ export default function ExperienceCard({
   startDate,
   endDate,
   summaryPoints,
+  imageWidth,
+  imageHeight,
+  smWidth,
+  smHeight
+ 
 }: Props) {
   return (
     <article
@@ -35,17 +47,19 @@ export default function ExperienceCard({
         transition={{ duration: 1.2 }}
       >
         <Image
-          className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+         className={"w-["+ smWidth+"] h-["+ smHeight+"] rounded-full object-cover object-center xl:w-[" + imageWidth + "] xl:h-[" + imageHeight + "]"}
+
+
           src={imageSrc}
           alt=""
-          width={223} // specify the width
-          height={181} // and the height
+          width={200} // specify the width
+          height={200} // and the height
         />
       </motion.div>
 
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">{title}</h4>
-        <p className="font-bold text-2xl mt-1">{company}</p>
+        <h4 className="text-4xl font-thin">{title}</h4>
+        <p className=" text-2xl mt-1">{company}</p>
         {/* 
         <div className='flex space-x-2 my-2'>
         {techUsed.map((tech, index) => (

@@ -66,7 +66,7 @@ function Projects({}: Props) {
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
-              viewport={{ once: true }}
+              
               className=" overflow-visible w-[300px] h-[300px] md:w-[300px] md:h-[1000px] object-cover lg:w-[420px] lg:h-[1000px] flex justify-center items-center"
             >
               <Image
