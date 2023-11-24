@@ -3,6 +3,8 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+
 
 
 type Props = {};
@@ -44,7 +46,8 @@ export default function Hero({}: Props) {
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
-        {/*<div className='pt-5'>
+        {/*
+        <div className='pt-5'>
                 
 
                 <Link href= "#about">
@@ -71,7 +74,8 @@ export default function Hero({}: Props) {
 
             
             </div>
-            */}
+             */}
+            
       </div>
     </motion.div>
   );
