@@ -41,7 +41,7 @@ export default function About({}: Props) {
           alt="Current Image"
           width={200} // replace with your desired width
           height={300} // replace with your desired height
-          className="-mb-1 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[3500px] md:h-[500px] xl:w-[5000px] xl:h-[600px]"
+          className="-mb-1 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[3500px] md:h-[500px] xl:w-[4500px] xl:h-[600px]"
         />
       </motion.div>
 
