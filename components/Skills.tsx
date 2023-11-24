@@ -1,38 +1,71 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Skill from "./Skill";
 
-type Props = {};
+type ServiceProps = {
+  name: string;
+  utilities: string[];
+  cost: string;
+};
 
-function Skills({}: Props) {
+const ServiceCard: React.FC<ServiceProps> = ({ name, utilities, cost }) => (
+  <div className="border rounded-xl p-4 m-2 flex flex-col justify-between">
+    <h2 className="text-xl text-thin font-bold mb-2">{name}</h2>
+    <ul>
+      {utilities.map((utility, index) => (
+        <li key={index}>{utility}</li>
+      ))}
+    </ul>
+    <p className="text-lg font-bold mt-2 ">Total Cost: ${cost}</p>
+  </div>
+);
+
+const Services: React.FC = () => {
+  const services: ServiceProps[] = [
+    {
+      name: "1 hour",
+      utilities: ["Events","Headshots", "Clothing"],
+      cost: "160"
+    },{
+      name: "1 hour",
+      utilities: ["Events","Headshots", "Clothing","Image editting"],
+      cost: "200",
+    },
+    {
+      name: "2 Hours",
+      utilities: ["Events","Headshots", "Clothing",],
+      cost: "330",
+    },
+    {
+      name: "2 Hours",
+      utilities: ["Events","Headshots", "Clothing", "Photoshop"],
+      cost: "360",
+    },
+    {
+      name: "3 Hours +",
+      utilities: ["Events","Headshots", "Clothing", "Photoshop"],
+      cost: "500",
+    },
+    
+
+    // Add more services as needed
+  ];
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px]
-      xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center "
-    >
-      <h3 className="absolute top-24  uppercase tracking-[20px] text-gray-500 text-2xl pt-3">
+    <div className="flex flex-col items-center justify-center min-h-screen mx-auto max-w-[2000px] px-10 text-center md:text-left">
+      <h4 className="text-2xl text-gray-500 tracking-[20px] uppercase pt-3">
         Services
-      </h3>
+      </h4>
 
-      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
-        Hover over time, price and extras{" "}
-      </h3>
+      <p className="text-sm text-thin text-gray-500 tracking-[3px] uppercase">
+        Check out my different services!
+      </p>
 
-      <div className="grid grid-cols-5 gap-5">
-        <Skill imageSRC={"/images/techused1.png"} skillPercentage={"75%"} />
-        <Skill imageSRC={"/images/techused3.png"} skillPercentage={"100%"} />
-        <Skill imageSRC={"/images/techused2.png"} skillPercentage={"88%"} />
-        <Skill imageSRC={"/images/techused4.png"} skillPercentage={"88%"} />
-        <Skill imageSRC={"/images/techused4.png"} skillPercentage={"88%"} />
-        <Skill imageSRC={"/images/techused4.png"} skillPercentage={"88%"} />
-        <Skill imageSRC={"/images/techused4.png"} skillPercentage={"88%"} />
-        <Skill imageSRC={"/images/techused4.png"} skillPercentage={"88%"} />
+      <div className="flex flex-wrap justify-center gap-5 mt-10">
+        {services.map((service, index) => (
+          <ServiceCard key={index} {...service} />
+        ))}
       </div>
-    </motion.div>
+    </div>
   );
-}
+};
 
-export default Skills;
+export default Services;

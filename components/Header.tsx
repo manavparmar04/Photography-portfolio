@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 
-
 type Props = {};
 
 export default function Header({}: Props) {
@@ -43,7 +42,6 @@ export default function Header({}: Props) {
           <Link href="#contact">
             <button className="heroButton">Contact</button>
           </Link>
-          
         </div>
       </motion.div>
       <div>
@@ -58,8 +56,7 @@ export default function Header({}: Props) {
             isOpen ? "block" : "hidden"
           } sm:hidden`}
         >
-          <div 
-          className="bg-[#292929] h-full w-52 fixed top-0 right-0 p-5 pr-5">
+          <div className="bg-[#292929] h-full w-52 fixed top-0 right-0 p-5 pr-5">
             <button onClick={() => setIsOpen(false)}>☰</button>
             <Link href="#about">
               <button className="heroButton">About</button>
@@ -76,29 +73,29 @@ export default function Header({}: Props) {
             <Link href="#contact">
               <button className="heroButton">Contact</button>
             </Link>
-            <div className="flex space-x-4 mt-4">
-    <SocialIcon
-      className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-      url="https://github.com/manavparmar04"
-      fgColor="gray"
-      bgColor="transparent"
-      target="_blank"
-    />
-    <SocialIcon
-      className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-      url="https://www.instagram.com/manav.04/"
-      fgColor="gray"
-      bgColor="transparent"
-      target="_blank"
-    />
-    <SocialIcon
-      className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-      url="https://www.linkedin.com/in/manav-parmar-039a24248/"
-      fgColor="gray"
-      bgColor="transparent"
-      target="_blank"
-    />
-  </div>
+            <div className="flex flex-col  mt-4">
+              <SocialIcon
+                className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
+                url="https://github.com/manavparmar04"
+                fgColor="gray"
+                bgColor="transparent"
+                target="_blank"
+              />
+              <SocialIcon
+                className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
+                url="https://www.instagram.com/manav.04/"
+                fgColor="gray"
+                bgColor="transparent"
+                target="_blank"
+              />
+              <SocialIcon
+                className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
+                url="https://www.linkedin.com/in/manav-parmar-039a24248/"
+                fgColor="gray"
+                bgColor="transparent"
+                target="_blank"
+              />
+            </div>
           </div>
         </div>
       </div>
