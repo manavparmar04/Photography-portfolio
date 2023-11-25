@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 type ServiceProps = {
   name: string;
@@ -7,7 +8,11 @@ type ServiceProps = {
 };
 
 const ServiceCard: React.FC<ServiceProps> = ({ name, utilities, cost }) => (
-  <div className="border rounded-xl p-4 m-2 flex flex-col justify-between">
+  <motion.div 
+  initial = {{opacity:0.}}
+  whileInView={{opacity:1,}}
+  transition={{duration:1.5}}
+  className="border rounded-xl p-4 m-2 flex flex-col justify-between">
     <h2 className="text-xl text-thin font-bold mb-2">{name}</h2>
     <ul>
       {utilities.map((utility, index) => (
@@ -15,7 +20,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ name, utilities, cost }) => (
       ))}
     </ul>
     <p className="text-lg font-bold mt-2 ">Total Cost: ${cost}</p>
-  </div>
+  </motion.div>
 );
 
 const Services: React.FC = () => {

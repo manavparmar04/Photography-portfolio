@@ -47,7 +47,7 @@ export default function Header({}: Props) {
       <div>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="sm:hidden absolute top-5 right-10 text-[#F7AB0A] "
+          className="sm:hidden absolute top-5 right-10 text-[#F7AB0A] animate-pulse text-xl "
         >
           ☰
         </button>
@@ -56,7 +56,7 @@ export default function Header({}: Props) {
             isOpen ? "block" : "hidden"
           } sm:hidden`}
         >
-          <div className="bg-[#292929] h-full w-52 fixed top-0 right-0 p-5 pr-5">
+          <div className="bg-[#292929] h-full w-52 fixed top-0 right-0 p-5 pr-5 text-xl">
             <button onClick={() => setIsOpen(false)}>☰</button>
             <Link href="#about">
               <button className="heroButton">About</button>
