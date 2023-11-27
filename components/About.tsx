@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -6,18 +7,24 @@ type Props = {};
 export default function About({}: Props) {
   const [currentImage, setCurrentImage] = useState("/images/aboutt.JPEG");
   const images = [
+    "/images/aboutt.JPEG",
     "/images/about1.JPEG",
     "/images/about2.JPEG",
-    "/images/about3.JPG",
     "/images/about4.JPG",
+    "/images/about5.JPG",
+    "/images/about6.JPG",
+    "/images/about7..JPG",
+    "/images/about8.JPEG",
+    "/images/about9.JPG",
+    "/images/about10.JPEG",
   ];
-
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage(
         images[(images.indexOf(currentImage) + 1) % images.length]
       );
-    }, 8000); // Changing speed of the image showing up (5 seconds rn)
+    }, 7000); // Changing speed of the image showing up (5 seconds rn)
     return () => clearInterval(timer);
   }, [currentImage]);
 
@@ -28,7 +35,16 @@ export default function About({}: Props) {
         About
       </h3>
 
-      <div>
+      {/*
+
+       */}
+
+      <motion.div
+        key={currentImage}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
         <Image
           src={currentImage}
           alt="Current Image"
@@ -37,14 +53,19 @@ export default function About({}: Props) {
           unoptimized={true}
           className="-mb-1 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[3500px] md:h-[500px] xl:w-[4500px] xl:h-[500px]"
         />
-      </div>
+      </motion.div>
 
       <div className="px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
           Little background about <span className="text-[#F7AB0A]"> Me</span>{" "}
         </h4>
 
-        <p className="text-base p-4 space-y-10">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="text-base p-4 space-y-10"
+        >
           Hello, My name is Manav Parmar, currently, a second-year Computer
           Science student at Toronto Metropolitan University. Since elementary
           school Photography has been a passion of mine, Over the years, I’ve
@@ -57,7 +78,7 @@ export default function About({}: Props) {
           my social media platforms or send me an email. You’ll find all the
           necessary details on the contact page below. I look forward to hearing
           from you!
-        </p>
+        </motion.p>
       </div>
     </div>
   );

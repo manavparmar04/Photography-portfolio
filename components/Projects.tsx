@@ -18,14 +18,14 @@ function Projects({}: Props) {
       title: "Headshots",
       description:
         "Showcasing a collection of professional headshots, capturing unique personalities and expressions. Each image is crafted with attention to lighting and detail, ensuring every subject is presented in the best possible light. Perfect for profiles, portfolios, or personal branding.",
-      Link: "https://drive.google.com/drive/folders/15obCDVCXddKZvEEK6P3zKFmAfPyXkv-m?usp=share_link",
+      Link: "https://drive.google.com/drive/folders/1tMJZ_-dRjrzzJFskmG1EVUumtIegJY-M?usp=share_link",
     },
     {
       imageSrc: "/images/event.JPG",
       title: "Events",
       description:
         "Snapping photos at all sorts of events, from graduations and birthdays to orientations and student club activities. Each photo is a memory, a frozen moment of joy and celebration. I focus on the little details and those spontaneous moments that make each event unique. ",
-      Link: "https://drive.google.com/drive/folders/15obCDVCXddKZvEEK6P3zKFmAfPyXkv-m?usp=share_link",
+      Link: "https://drive.google.com/drive/folders/1tMJZ_-dRjrzzJFskmG1EVUumtIegJY-M?usp=share_link",
     },
 
     {
@@ -33,7 +33,7 @@ function Projects({}: Props) {
       title: "Pets",
       description:
         "Showcasing a variety of adorable pet portraits that capture the unique personalities of your furry friends. From playful poses to peaceful slumbers, each image highlights the charm and character of these beloved family members.",
-      Link: "https://drive.google.com/drive/folders/15obCDVCXddKZvEEK6P3zKFmAfPyXkv-m?usp=share_link",
+      Link: "https://drive.google.com/drive/folders/1tMJZ_-dRjrzzJFskmG1EVUumtIegJY-M?usp=share_link",
     },
 
     {
@@ -41,7 +41,7 @@ function Projects({}: Props) {
       title: "Cars",
       description:
         "Featuring a collection of striking car photographs that highlight the sleek designs and intricate details of various automobiles. From vintage classics to modern marvels, each image captures the beauty and power of these machines.",
-      Link: "https://drive.google.com/drive/folders/15obCDVCXddKZvEEK6P3zKFmAfPyXkv-m?usp=share_link",
+      Link: "https://drive.google.com/drive/folders/1tMJZ_-dRjrzzJFskmG1EVUumtIegJY-M?usp=share_link",
     },
   ];
 
@@ -56,7 +56,7 @@ function Projects({}: Props) {
         Photography
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] ">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] ">
         {projects.map((project, i) => (
           <div
             key={i}
