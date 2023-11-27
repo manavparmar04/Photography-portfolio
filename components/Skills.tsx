@@ -8,48 +8,58 @@ type ServiceProps = {
 };
 
 const ServiceCard: React.FC<ServiceProps> = ({ name, utilities, cost }) => (
-  <motion.div 
-  initial = {{opacity:0.}}
-  whileInView={{opacity:1,}}
-  transition={{duration:1.5}}
-  className="border rounded-xl p-4 m-2 flex flex-col justify-between">
-    <h2 className="text-xl text-thin font-bold mb-2">{name}</h2>
-    <ul>
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 1.5 }}
+    className="border border-gray-500/40 rounded-xl p-4 m-2 flex flex-col justify-between"
+  >
+    <h2 className="text-xl text-thin font-bold mb-2 text-[#F7AB0A]/80">
+      {name}
+    </h2>
+    <ul className="text-gray-400">
       {utilities.map((utility, index) => (
         <li key={index}>{utility}</li>
       ))}
     </ul>
-    <p className="text-lg font-bold mt-2 ">Total Cost: ${cost}</p>
+    <p className="text-lg font-bold mt-2 text-gray-100 ">{cost}</p>
   </motion.div>
 );
 
 const Services: React.FC = () => {
   const services: ServiceProps[] = [
+    // ‎ invisible character
     {
-      name: "1 hour",
-      utilities: ["Events","Headshots", "Clothing"],
-      cost: "160"
-    },{
-      name: "1 hour",
-      utilities: ["Events","Headshots", "Clothing","Image editting"],
-      cost: "200",
+      name: "Standard",
+      utilities: ["- Professional Equipment", "- Post-Processing", "- Digital Delivery", "- Print (Optional $)", "‎", "‎", "‎", "‎", "‎"],
+      cost: "",
+    },
+    {
+      name: "1 Hour",
+      utilities: ["Options:","- Headshots","- Family Potraits","- Pet Photography", "- Product Photography", "- Life Style Photos", "- Car shots", "- Student Club events"],
+      cost: "Total Cost: $150",
     },
     {
       name: "2 Hours",
-      utilities: ["Events","Headshots", "Clothing",],
-      cost: "330",
+      utilities: ["Options:", "- Headshots", "- Engagement Photos","- Pet Photography", "- Product Photography", "- Life Style Photos","- Student Club events", "‎ "],
+      cost: "Total Cost: $260",
     },
     {
-      name: "2 Hours",
-      utilities: ["Events","Headshots", "Clothing", "Photoshop"],
-      cost: "360",
+      name: "3 Hours",
+      utilities: ["Options:", "- Engagement Photos", "- Product Photography", "- Life Style Photos","- Student Club events","- Club events", "‎ ","‎"],
+      cost: "Total Cost: $320",
     },
     {
-      name: "3 Hours +",
-      utilities: ["Events","Headshots", "Clothing", "Photoshop"],
-      cost: "500",
+      name: "All Day",
+      utilities: ["Options:","- Weddings", "- Music Festivals", "- Sporting Events", "- Engagement Photo", "- Student Clubs events", "- Corporate Events", "‎"],
+      cost: "Total Cost: $450",
     },
-    
+
+    {
+      name: "Custom",
+      utilities: ["Don't see the service that you need?", "Looking for a custom amount of hours?", "No problem! I'm flexible and happy to tailor my services to meet your specific needs.", "Please feel free to contact me to discuss your unique requirements."],
+      cost: "",
+    },
 
     // Add more services as needed
   ];

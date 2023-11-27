@@ -31,13 +31,14 @@ export default function Home() {
         <WorkExperience />
       </section>
 
+      <section id="photos" > {/*className="snap-start"*/}
+        <Projects />
+      </section>
+
       <section id="services" > {/*className="snap-start"*/}
         <Skills />
       </section>
 
-      <section id="photos" > {/*className="snap-start"*/}
-        <Projects />
-      </section>
 
       {/* Contact me */}
       <section id="contact" > {/*className="snap-start"*/}
