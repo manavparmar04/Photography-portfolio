@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-
-
 type Props = {};
 
 export default function Hero({}: Props) {
@@ -36,7 +34,7 @@ export default function Hero({}: Props) {
           className="rounded-full h-32 w-32 mx-auto object-cover object-center"
         />
       </motion.div>
-      <div className="z-20">
+      <div className="z-25">
         {" "}
         {/* Made Z greater than 0 to bring up the layer, almost like putting this layer ahead of the background*/}
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
@@ -75,7 +73,6 @@ export default function Hero({}: Props) {
             
             </div>
              */}
-            
       </div>
     </motion.div>
   );
