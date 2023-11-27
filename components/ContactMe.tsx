@@ -20,10 +20,17 @@ type Inputs = {
 type Props = {};
 
 function ContactMe({}: Props) {
-  const { register, handleSubmit } = useForm<Inputs>();
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
+  {
+    /* const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href = `mailto:manavparmar3775@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
   };
+  */
+  }
 
   //console.log(formData);
 
@@ -81,18 +88,21 @@ function ContactMe({}: Props) {
         </div>
 
         <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-3   w-full md:w-auto mx-auto pt-3"
+          data-netlify="true"
+          name="contact"
+          method="POST"
+          className="flex flex-col space-y-3 w-full md:w-auto mx-auto pt-3"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
             <input
-              {...register("name")}
+              name="fullName"
               placeholder="Full Name"
               className="contactInput"
               type="text"
             />
             <input
-              {...register("email")}
+              name="email"
               placeholder="Email"
               className="contactInput"
               type="email"
@@ -100,14 +110,14 @@ function ContactMe({}: Props) {
           </div>
 
           <input
-            {...register("subject")}
+            name="subject"
             placeholder="Subject"
             className="contactInput"
             type="text"
           />
 
           <AutosizeTextarea
-            {...register("message")}
+            name="message"
             placeholder="Message"
             className="contactInput"
           />
