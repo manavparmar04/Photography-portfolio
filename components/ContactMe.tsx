@@ -89,7 +89,7 @@ function ContactMe({}: Props) {
 
         <form
           data-netlify="true"
-          name="contact"
+          name="Photography-Contact"
           method="POST"
           className="flex flex-col space-y-3 w-full md:w-auto mx-auto pt-3"
         >

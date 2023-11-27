@@ -29,7 +29,7 @@ export default function About({}: Props) {
   }, [currentImage]);
 
   return (
-    <div className="h-screen flex flex-col relative text-right md:text-center md:flex-row max-w-7xl px-1 justify-center mx-auto items-center ">
+    <div className="h-screen flex flex-col relative text-center md:text-center md:flex-row max-w-7xl px-1 justify-center mx-auto items-center ">
       <h3 className="  sm:absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl pb-3">
         {" "}
         About
