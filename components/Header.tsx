@@ -33,11 +33,11 @@ export default function Header({}: Props) {
           <Link href="#experience">
             <button className="heroButton">Experience</button>
           </Link>
+          <Link href="#photos">
+            <button className="heroButton">Photography</button>
+          </Link>
           <Link href="#services">
             <button className="heroButton">Services</button>
-          </Link>
-          <Link href="#photos">
-            <button className="heroButton">Photos</button>
           </Link>
           <Link href="#contact">
             <button className="heroButton">Contact</button>
@@ -47,7 +47,7 @@ export default function Header({}: Props) {
       <div>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="sm:hidden absolute top-5 right-10 text-[#F7AB0A] animate-pulse text-xl "
+          className="sm:hidden absolute top-5 right-10 text-[#F7AB0A] animate-pulse text-3xl "
         >
           ☰
         </button>
@@ -56,31 +56,24 @@ export default function Header({}: Props) {
             isOpen ? "block" : "hidden"
           } sm:hidden`}
         >
-          <div className="bg-[#292929] h-full w-52 fixed top-0 right-0 p-5 pr-5 text-xl">
+          <div className="bg-[#292929] h-full w-52 fixed top-0 right-0 p-5 pr-5 text-3xl">
             <button onClick={() => setIsOpen(false)}>☰</button>
             <Link href="#about">
-              <button className="heroButton">About</button>
+              <button className="heroButton mb-5">About</button>
             </Link>
             <Link href="#experience">
-              <button className="heroButton">Experience</button>
-            </Link>
-            <Link href="#services">
-              <button className="heroButton">Services</button>
+              <button className="heroButton mb-5">Experience</button>
             </Link>
             <Link href="#photos">
-              <button className="heroButton">Photos</button>
+              <button className="heroButton mb-5">Photography</button>
+            </Link>
+            <Link href="#services">
+              <button className="heroButton mb-5">Services</button>
             </Link>
             <Link href="#contact">
-              <button className="heroButton">Contact</button>
+              <button className="heroButton mb-5">Contact</button>
             </Link>
-            <div className="flex flex-col  mt-4">
-              <SocialIcon
-                className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-                url="https://github.com/manavparmar04"
-                fgColor="gray"
-                bgColor="transparent"
-                target="_blank"
-              />
+            <div className="flex flex-row  mt-4">
               <SocialIcon
                 className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
                 url="https://www.instagram.com/manav.04/"
