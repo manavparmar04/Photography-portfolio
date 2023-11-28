@@ -100,12 +100,14 @@ function ContactMe({}: Props) {
               placeholder="Full Name"
               className="contactInput"
               type="text"
+              required
             />
             <input
               name="email"
               placeholder="Email"
               className="contactInput"
               type="email"
+              required
             />
           </div>
 
@@ -114,12 +116,14 @@ function ContactMe({}: Props) {
             placeholder="Subject"
             className="contactInput"
             type="text"
+            required
           />
 
           <AutosizeTextarea
             name="message"
             placeholder="Message"
             className="contactInput"
+            required
           />
 
           <button
@@ -132,13 +136,6 @@ function ContactMe({}: Props) {
 
         <div className="flex flex-row justify-center sm:flex-col items-center  sm:space-y-0 sm:space-x-4 animate-pulse">
           <div className="flex justify-center items-center">
-            <SocialIcon
-              className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-              url="https://github.com/manavparmar04"
-              fgColor="gray"
-              bgColor="transparent"
-              target="_blank"
-            />
             <SocialIcon
               className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
               url="https://www.instagram.com/manav.04/"

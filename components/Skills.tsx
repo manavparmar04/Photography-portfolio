@@ -17,7 +17,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ name, utilities, cost }) => (
     <h2 className="text-xl text-thin font-bold mb-2 text-[#F7AB0A]/80">
       {name}
     </h2>
-    <ul className="text-gray-400">
+    <ul className="text-gray-400 text-left">
       {utilities.map((utility, index) => (
         <li key={index}>{utility}</li>
       ))}

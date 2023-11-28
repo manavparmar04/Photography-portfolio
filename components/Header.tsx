@@ -73,6 +73,9 @@ export default function Header({}: Props) {
             <Link href="#contact">
               <button className="heroButton mb-5">Contact</button>
             </Link>
+            <Link href="#hero">
+              <button className="heroButton mb-5">Return to Top</button>
+            </Link>
             <div className="flex flex-row  mt-4">
               <SocialIcon
                 className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
