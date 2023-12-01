@@ -29,7 +29,7 @@ export default function About({}: Props) {
   }, [currentImage]);
 
   return (
-    <div className="h-screen flex flex-col relative text-center md:text-center md:flex-row max-w-7xl px-1 justify-center mx-auto items-center ">
+    <div className="h-screen flex flex-col relative text-center md:text-center md:flex-row max-w-7xl px-1 justify-center mx-auto items-center overflow-auto ">
       <h3 className="  sm:absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl pb-3">
         {" "}
         About
@@ -76,8 +76,7 @@ export default function About({}: Props) {
           explore and enjoy! If you have any inquiries, want to connect, or just
           fancy a chat, don’t hesitate to reach out! You can contact me through
           my social media platforms or send me an email. You’ll find all the
-          necessary details on the contact page below. I look forward to hearing
-          from you!
+          necessary details on the contact page below. 
         </motion.p>
       </div>
     </div>

@@ -13,10 +13,7 @@ type Props = {
   imageWidth: string;
   imageHeight: string;
   smWidth: string;
-  smHeight:string;
-
- 
-
+  smHeight: string;
 };
 
 export default function ExperienceCard({
@@ -30,16 +27,14 @@ export default function ExperienceCard({
   imageWidth,
   imageHeight,
   smWidth,
-  smHeight
- 
+  smHeight,
 }: Props) {
   return (
     <article
-    
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
                       w-[500px] md:w-[600px] sm:w-[400px] xl:w-[900px] snap-center bg-[#292929] p-10
                       hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200
-                      overflow-hidden"
+                      overflow-hidden mt-12"
     >
       <motion.div
         initial={{ y: -100, opacity: 0 }}
@@ -47,9 +42,17 @@ export default function ExperienceCard({
         transition={{ duration: 1.2 }}
       >
         <Image
-         className={"w-["+ smWidth+"] h-["+ smHeight+"] rounded-full object-cover object-center xl:w-[" + imageWidth + "] xl:h-[" + imageHeight + "]"}
-
-
+          className={
+            "w-[" +
+            smWidth +
+            "] h-[" +
+            smHeight +
+            "] rounded-full object-cover object-center xl:w-[" +
+            imageWidth +
+            "] xl:h-[" +
+            imageHeight +
+            "]"
+          }
           src={imageSrc}
           alt=""
           width={200} // specify the width

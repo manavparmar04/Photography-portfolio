@@ -17,7 +17,7 @@ function Projects({}: Props) {
       imageSrc: "/images/headshot.JPG",
       title: "Headshots",
       description:
-        "Showcasing a collection of professional headshots, capturing unique personalities and expressions. Each image is crafted with attention to lighting and detail, ensuring every subject is presented in the best possible light. Perfect for profiles, portfolios, or personal branding.",
+        "Showcasing a collection of professional headshots, capturing unique personalities and expressions. Each image is crafted with attention to lighting and detail, ensuring every subject is presented in the best possible light. Perfect for profiles, portfolios, or personal branding. SWIPE TO SEE MORE!",
       Link: "https://drive.google.com/drive/folders/1tMJZ_-dRjrzzJFskmG1EVUumtIegJY-M?usp=share_link",
     },
     {
@@ -56,7 +56,7 @@ function Projects({}: Props) {
         Photography
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] ">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] mt-10 ">
         {projects.map((project, i) => (
           <div
             key={i}
@@ -66,7 +66,6 @@ function Projects({}: Props) {
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
-              
               className=" overflow-visible w-[300px] h-[300px] md:w-[300px] md:h-[1000px] object-cover lg:w-[420px] lg:h-[1000px] flex justify-center items-center"
             >
               <Image
