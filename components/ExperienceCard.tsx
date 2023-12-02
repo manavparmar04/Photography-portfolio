@@ -32,7 +32,7 @@ export default function ExperienceCard({
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-                      w-[350px] md:w-[600px] sm:w-[400px] xl:w-[900px] snap-center bg-[#292929] p-10
+                      w-[390px] md:w-[600px] sm:w-[400px] xl:w-[900px] snap-center bg-[#292929] p-10
                       hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200
                       overflow-auto mt-12"
     >
