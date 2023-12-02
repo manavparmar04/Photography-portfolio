@@ -138,7 +138,7 @@ function ContactMe({}: Props) {
           <div className="flex justify-center items-center">
             <SocialIcon
               className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-              url="https://www.instagram.com/manav.04/"
+              url="https://www.instagram.com/manavphotography_/"
               fgColor="gray"
               bgColor="transparent"
               target="_blank"

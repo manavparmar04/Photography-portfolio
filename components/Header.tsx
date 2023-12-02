@@ -79,7 +79,7 @@ export default function Header({}: Props) {
             <div className="flex flex-row  mt-4">
               <SocialIcon
                 className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
-                url="https://www.instagram.com/manav.04/"
+                url="https://www.instagram.com/manavphotography_/"
                 fgColor="gray"
                 bgColor="transparent"
                 target="_blank"
