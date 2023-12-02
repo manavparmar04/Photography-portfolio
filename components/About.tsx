@@ -73,13 +73,13 @@ export default function About({}: Props) {
           skills in computer science to make this website from the ground up, so
           everything you see has been made by me. If you come across any issues
           feel free to let me know. But anyways, photography has always been
-          something I enjoyed doing and over the years, I’ve had the opportunity
-          to refine my skills and now, I’m excited to take things to the next
+          something I enjoyed doing and over the years, I have had the opportunity
+          to refine my skills and now, I a, excited to take things to the next
           level by offering my services to others. The images you see on this
-          page are just a small sample of my work. There’s a whole page
+          page are just a small sample of my work. There is a whole page
           dedicated to showcasing my photography, so feel free to explore and
           enjoy! If you have any inquiries, want to connect, or just fancy a
-          chat, don’t hesitate to reach out! You can contact me through my
+          chat, do not hesitate to reach out! You can contact me through my
           social media platforms or send me an email at the very bottom. 
         </motion.p>
       </div>
