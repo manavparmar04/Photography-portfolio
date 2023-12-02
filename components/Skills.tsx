@@ -12,7 +12,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ name, utilities, cost }) => (
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1.5 }}
-    className="border border-gray-500/40 rounded-xl p-4 m-2 flex flex-col justify-between"
+    className=" border border-gray-500/40 rounded-xl p-4 m-2 flex flex-col justify-between"
   >
     <h2 className="text-xl text-thin font-bold mb-2 text-[#F7AB0A]/80">
       {name}

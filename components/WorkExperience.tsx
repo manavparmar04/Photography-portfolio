@@ -56,10 +56,10 @@ function WorkExperience({}: Props) {
             "Documented and captured various events.",
             "Utilized advanced photo editing tools to enhance and retouch images.",
           ]}
-          imageWidth={"400"}
-          imageHeight={"130"}
-          smWidth={"36"}
-          smHeight={"36"}
+          imageWidth={"350"}
+          imageHeight={"10"}
+          smWidth={"26"}
+          smHeight={"26"}
         />
         <ExperienceCard
           title={"VP of Social Communications"}
@@ -69,8 +69,7 @@ function WorkExperience({}: Props) {
           startDate={"Nov 12 2023"}
           endDate={"Present"}
           summaryPoints={[
-            "So far have not done anything",
-            "Responsibilities will include Photography and Videography",
+            "Responsibilities will include Photography and Videography for the main event",
             "Make reels and tiktoks to promote the event",
           ]}
           imageWidth={""}

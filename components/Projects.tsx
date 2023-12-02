@@ -17,7 +17,7 @@ function Projects({}: Props) {
       imageSrc: "/images/headshot.JPG",
       title: "Headshots",
       description:
-        "Showcasing a collection of professional headshots, capturing unique personalities and expressions. Each image is crafted with attention to lighting and detail, ensuring every subject is presented in the best possible light. Perfect for profiles, portfolios, or personal branding. SWIPE TO SEE MORE!",
+        "Showcasing a collection of professional headshots, capturing unique personalities and expressions and ensuring every subject is presented in the best possible light. Perfect for profiles, portfolios, or personal branding. SWIPE TO SEE MORE!",
       Link: "https://drive.google.com/drive/folders/1tMJZ_-dRjrzzJFskmG1EVUumtIegJY-M?usp=share_link",
     },
     {
@@ -50,7 +50,7 @@ function Projects({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-center mx-auto items-center z-0 scrollbar-thin"
+      className="min-h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-center mx-auto items-center z-0 scrollbar-thin"
     >
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl pl-5 pt-1">
         Photography
@@ -81,7 +81,7 @@ function Projects({}: Props) {
                   {project.title}
                 </span>{" "}
               </h4>
-              <p className="text-md font-thin text-center">
+              <p className=" text-md font-thin text-center ">
                 {project.description}
               </p>
               <a

@@ -32,9 +32,9 @@ export default function ExperienceCard({
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-                      w-[500px] md:w-[600px] sm:w-[400px] xl:w-[900px] snap-center bg-[#292929] p-10
+                      w-[350px] md:w-[600px] sm:w-[400px] xl:w-[900px] snap-center bg-[#292929] p-10
                       hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200
-                      overflow-hidden mt-12"
+                      overflow-auto mt-12"
     >
       <motion.div
         initial={{ y: -100, opacity: 0 }}
@@ -80,7 +80,7 @@ export default function ExperienceCard({
           Started: {startDate} | Ended: {endDate}
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-lg  h-[200px]">
+        <ul className="list-disc space-y-4 ml-5 text-lg h-[200px]">
           {summaryPoints.map((point, index) => (
             <li key={index}>{point}</li>
           ))}

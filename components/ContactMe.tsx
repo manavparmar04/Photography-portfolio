@@ -35,7 +35,7 @@ function ContactMe({}: Props) {
   //console.log(formData);
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 py-15 justify-center mx-auto items-center gap-10  ">
+    <div className="min-h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 py-15 justify-center mx-auto items-center gap-10  ">
       <div>
         <h3 className=" flex top-20  uppercase tracking-[20px] text-gray-500 text-2xl sm: px-5 py-2  ">
           Contact
