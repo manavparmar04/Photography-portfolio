@@ -68,8 +68,8 @@ export default function About({}: Props) {
         >
           Hello, My name is Manav Parmar, currently, a second-year Computer
           Science student at Toronto Metropolitan University. You might be
-          wondering, what does computer science have to do with photography?
-          Well, it doesn't. However, I decided to combine the two and use my
+          wondering, what does my work in computer science have to do with photography?
+          Well, nothing! However, I decided to combine the two and use my
           skills in computer science to make this website from the ground up, so
           everything you see has been made by me. If you come across any issues
           feel free to let me know. But anyways, photography has always been
