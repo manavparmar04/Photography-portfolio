@@ -32,8 +32,9 @@ function WorkExperience({}: Props) {
           endDate={"Present"}
           summaryPoints={[
             "Captured professional headshots for members, enhancing their professional online presence.",
-            "Documented and captured various events.",
+            "Documented various events through photography, ensuring comprehensive coverage and capturing key moments",
             "Utilized advanced photo editing tools to enhance and retouch images.",
+            "Utilized Adobe Photoshop for post-processing, including color correction, cropping, and retouching to deliver polished final images.",
           ]}
           imageWidth={"400px"}
           imageHeight={"130px"}
@@ -52,7 +53,7 @@ function WorkExperience({}: Props) {
           startDate={"August 2023"}
           endDate={"Present"}
           summaryPoints={[
-            "Captured professional headshots for members, enhancing their professional online presence.",
+            "Captured high-quality, professional headshots for members, enhancing personal branding and online presence",
             "Documented and captured various events.",
             "Utilized advanced photo editing tools to enhance and retouch images.",
           ]}
