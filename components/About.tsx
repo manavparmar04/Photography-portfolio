@@ -56,7 +56,7 @@ export default function About({}: Props) {
       </motion.div>
 
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+        <h4 className="text-4xl font-thin">
           Little background about <span className="text-[#F7AB0A]"> Me</span>{" "}
         </h4>
 
@@ -64,7 +64,7 @@ export default function About({}: Props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="text-base p-4 space-y-10"
+          className="text-base p-4 space-y-10 font-thin"
         >
           Hello, My name is Manav Parmar, currently, a second-year Computer
           Science student at Toronto Metropolitan University. You might be

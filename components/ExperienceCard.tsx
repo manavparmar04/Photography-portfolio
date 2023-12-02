@@ -80,7 +80,7 @@ export default function ExperienceCard({
           Started: {startDate} | Ended: {endDate}
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-lg h-[200px]">
+        <ul className="list-disc space-y-4 ml-5 text-lg h-[200px] font-thin">
           {summaryPoints.map((point, index) => (
             <li key={index}>{point}</li>
           ))}

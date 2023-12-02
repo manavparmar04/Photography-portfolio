@@ -10,7 +10,7 @@ type Props = {};
 export default function Hero({}: Props) {
   const [text, count] = useTypewriter({
     words: [
-      "Welcome to MP's Photography",
+      "Welcome to Manav's Photography!",
       "Capturing Moments One Click at a Time",
       "Bringing Life to Photos",
       /* This can be changed later */
@@ -27,7 +27,7 @@ export default function Hero({}: Props) {
         transition={{ duration: 1.5 }}
       >
         <Image
-          src="/images/hero.JPG"
+          src="/images/Logo.png"
           alt=""
           width={500} // specify the width
           height={500} // and the height

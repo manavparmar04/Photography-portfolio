@@ -14,15 +14,15 @@ const ServiceCard: React.FC<ServiceProps> = ({ name, utilities, cost }) => (
     transition={{ duration: 1.5 }}
     className=" border border-gray-500/40 rounded-xl p-4 m-2 flex flex-col justify-between"
   >
-    <h2 className="text-xl text-thin font-bold mb-2 text-[#F7AB0A]/80">
+    <h2 className="text-xl text-thin font-bold mb-2 text-[#F7AB0A]/80 font-thin">
       {name}
     </h2>
-    <ul className="text-gray-400 text-left">
+    <ul className="text-gray-400 text-left font-thin">
       {utilities.map((utility, index) => (
         <li key={index}>{utility}</li>
       ))}
     </ul>
-    <p className="text-lg font-bold mt-2 text-gray-100 ">{cost}</p>
+    <p className="text-lg font-bold mt-2 text-gray-100 font-thin ">{cost}</p>
   </motion.div>
 );
 
