@@ -62,7 +62,7 @@ export default function About({}: Props) {
 
         <motion.p
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
           className="text-base p-4 space-y-10"
         >
