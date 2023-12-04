@@ -52,12 +52,12 @@ export default function Header({}: Props) {
           ☰
         </button>
         <div
-          className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-20 ${
+          className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 ${
             isOpen ? "block" : "hidden"
           } sm:hidden z-50`}
         >
-          <div className="bg-[#292929] h-full w-52 fixed top-0 right-0 p-5 pr-5 text-3xl">
-            <button onClick={() => setIsOpen(false)}>☰</button>
+          <div className="bg-[#292929] h-full w-52 fixed top-0 right-0 p-5 pr-5 text-3xl font-semibold text-[#292929]]">
+            <button onClick={() => setIsOpen(false)}>Close</button>
             <Link href="#about">
               <button className="heroButton mb-5">About</button>
             </Link>
