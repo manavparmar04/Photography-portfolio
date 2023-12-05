@@ -42,6 +42,25 @@ function WorkExperience({}: Props) {
           smHeight={"100"}
         />
         <ExperienceCard
+          title={"Headshot Photographer"}
+          company={"Psych Student Association"}
+          imageSrc={"/images/ppsa.png"}
+          techUsed={[]}
+          startDate={"Nov 13th 2023"}
+          endDate={"Nov 13th 2023"}
+          summaryPoints={[
+            "Captured professional headshots for approximately 20 members of a student organization",
+            "Worked closely with each individual to understand their preferences and needs, resulting in high client satisfaction",
+            "Managed multiple photoshoots in a timely and organized manner",
+            "Collaborated effectively with the student group to schedule photoshoots and discuss specific requirements or requests",
+          ]}
+          imageWidth={"100"}
+          imageHeight={"150"}
+          smWidth={"36"}
+          smHeight={"36"}
+        />
+
+        <ExperienceCard
           title={"VP of Photography"}
           company={"Metropolitan U Quantum Science and Engineering"}
           imageSrc={"/images/QSEC.JPG"}
@@ -65,7 +84,7 @@ function WorkExperience({}: Props) {
         <ExperienceCard
           title={"VP of Social Communications"}
           company={"Student Leadership Conference"}
-          imageSrc={"/images/temp.png"}
+          imageSrc={"/images/slc.png"}
           techUsed={[]}
           startDate={"Nov 12 2023"}
           endDate={"Present"}
