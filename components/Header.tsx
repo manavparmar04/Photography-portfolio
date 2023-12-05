@@ -56,8 +56,8 @@ export default function Header({}: Props) {
             isOpen ? "block" : "hidden"
           } sm:hidden z-50`}
         >
-          <div className="bg-[#292929] h-full w-52 fixed top-0 right-0 p-5 pr-5 text-3xl font-semibold text-[#292929]]">
-            <button onClick={() => setIsOpen(false)}>Close</button>
+          <div className="bg-[#292929]/60 h-full w-screen fixed top-0 right-0 p-5 pr-5 text-3xl font-semibold text-center flex flex-col text-gray-500">
+            <button onClick={() => setIsOpen(false)}>X</button>
             <Link href="#about">
               <button className="heroButton mb-5">About</button>
             </Link>
@@ -76,7 +76,7 @@ export default function Header({}: Props) {
             <Link href="#hero">
               <button className="heroButton mb-5">Return to Top</button>
             </Link>
-            <div className="flex flex-row  mt-4">
+            <div className="flex flex-row mt-4 justify-center">
               <SocialIcon
                 className="hover:opacity-40 opacity-100 transition-opacity duration-200 animate-pulse"
                 url="https://www.instagram.com/manavphotography_/"
