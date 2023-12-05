@@ -56,25 +56,25 @@ export default function Header({}: Props) {
             isOpen ? "block" : "hidden"
           } sm:hidden z-50`}
         >
-          <div className="bg-[#292929]/60 h-full w-screen fixed top-0 right-0 p-5 pr-5 text-3xl font-semibold text-center flex flex-col text-gray-500">
+          <div className="bg-[#292929]/90 h-full w-screen fixed top-0 right-0 p-5 pr-5 text-3xl font-semibold text-center flex flex-col text-gray-500">
             <button onClick={() => setIsOpen(false)}>X</button>
             <Link href="#about">
-              <button className="heroButton mb-5">About</button>
+              <button className="heromenuButton mb-5 mt-5">About</button>
             </Link>
             <Link href="#experience">
-              <button className="heroButton mb-5">Experience</button>
+              <button className="heromenuButton mb-5">Experience</button>
             </Link>
             <Link href="#photos">
-              <button className="heroButton mb-5">Photography</button>
+              <button className="heromenuButton mb-5">Photography</button>
             </Link>
             <Link href="#services">
-              <button className="heroButton mb-5">Services</button>
+              <button className="heromenuButton mb-5">Services</button>
             </Link>
             <Link href="#contact">
-              <button className="heroButton mb-5">Contact</button>
+              <button className="heromenuButton mb-5">Contact</button>
             </Link>
             <Link href="#hero">
-              <button className="heroButton mb-5">Return to Top</button>
+              <button className="heromenuButton mb-5">Return to Top</button>
             </Link>
             <div className="flex flex-row mt-4 justify-center">
               <SocialIcon
