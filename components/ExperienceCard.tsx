@@ -34,7 +34,7 @@ export default function ExperienceCard({
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
                       w-[322px] md:w-[600px] sm:w-[400px] xl:w-[900px] snap-center bg-[#292929] p-10
                       hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200
-                      overflow-auto mt-12"
+                      overflow-auto mt-12 mb-5"
     >
       <motion.div
         initial={{ y: -100, opacity: 0 }}
