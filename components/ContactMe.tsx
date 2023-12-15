@@ -83,7 +83,7 @@ function ContactMe({}: Props) {
             className="flex items-center space-x-5 justify-center font-thin"
           >
             <MailIcon className="h-6 w-6 text-[#F7AB0A] animate-pulse" />
-            <p className="text-2xl">manavparmar3775@gmail.com</p>
+            <p className="text-2xl">manavphotography20@gmail.com</p>
           </motion.div>
         </div>
 

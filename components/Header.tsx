@@ -57,7 +57,8 @@ export default function Header({}: Props) {
           } sm:hidden z-50`}
         >
           <div className="bg-[#292929]/90 h-full w-screen fixed top-0 right-0 p-5 pr-5 text-3xl font-semibold text-center flex flex-col">
-            <button className=" text-5xl font-thin text-right text-[#F7AB0A] animate-pulse" onClick={() => setIsOpen(false)}>x</button>
+            <button className=" text-5xl font-thin text-right text-[#F7AB0A] animate-pulse" 
+            onClick={() => setIsOpen(false)}>x</button>
             <Link href="#about">
               <button className="heromenuButton mb-5 mt-5">About</button>
             </Link>
