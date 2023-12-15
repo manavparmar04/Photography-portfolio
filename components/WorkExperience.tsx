@@ -33,7 +33,6 @@ function WorkExperience({}: Props) {
           summaryPoints={[
             "Captured professional headshots for members, enhancing their professional online presence.",
             "Documented various events through photography, ensuring comprehensive coverage and capturing key moments",
-            "Utilized advanced photo editing tools to enhance and retouch images.",
             "Utilized Adobe Photoshop for post-processing, including color correction, cropping, and retouching to deliver polished final images.",
           ]}
           imageWidth={"400px"}
