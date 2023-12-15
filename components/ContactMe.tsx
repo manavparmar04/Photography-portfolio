@@ -73,7 +73,7 @@ function ContactMe({}: Props) {
             className="flex items-center space-x-5 justify-center font-thin"
           >
             <LocationMarkerIcon className="h-6 w-6 text-[#F7AB0A] animate-pulse" />
-            <p className="text-2xl">Markham, Ontario </p>
+            <p className="text-2xl">Toronto, Ontario </p>
           </motion.div>
 
           <motion.div
