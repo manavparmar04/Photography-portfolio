@@ -15,7 +15,7 @@ function Projects({}: Props) {
   const projects: Project[] = [
     {
       imageSrc: "/images/headshot.JPG",
-      title: "Headshots",
+      title: "Headshots (Swipe for more)",
       description:
         "Showcasing a collection of professional headshots, capturing unique personalities and expressions and ensuring every subject is presented in the best possible light. Perfect for profiles, portfolios, or personal branding. SWIPE TO SEE MORE!",
       Link: "https://drive.google.com/drive/folders/1zL_DpiaEPAsRRwSWfak8tnAHyAuIt4kL?usp=share_link",
