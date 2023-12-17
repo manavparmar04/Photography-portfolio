@@ -50,7 +50,7 @@ export default function About({}: Props) {
           alt="Current Image"
           width={200} // replace with your desired width
           height={300} // replace with your desired height
-          unoptimized={true}
+          //unoptimized={true}
           className="-mb-1 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[3500px] md:h-[500px] xl:w-[4500px] xl:h-[500px]"
         />
       </motion.div>
@@ -68,19 +68,21 @@ export default function About({}: Props) {
         >
           Hello, My name is Manav Parmar, currently, a second-year Computer
           Science student at Toronto Metropolitan University. You might be
-          wondering, what does my work in computer science have to do with photography?
-          Well, not much! However, I decided to combine my two passions and use my
-          skills in computer science to make this website from the ground up, so
-          everything you see has been made by me. If you come across any issues
-          feel free to let me know. But anyways, photography has always been
-          something I enjoyed doing and over the years, I have had the opportunity
-          to refine my skills and now, I am excited to take things to the next
-          level by offering my services to others. The images you see on this
-          page are just a small sample of my work. There is a whole page
-          dedicated to showcasing my photography, so feel free to explore and
-          enjoy! If you have any inquiries, want to connect, or just fancy a
-          chat, do not hesitate to reach out! You can contact me through my
-          social media platforms or send me an email at the very bottom. 
+          wondering, what does my work in computer science have to do with
+          photography? Well, not much! However, I decided to combine my two
+          passions and use my skills in computer science to make this website
+          from the ground up, so everything you see has been made by me. If you
+          come across any issues feel free to let me know. But anyways,
+          photography has always been something I enjoyed doing and over the
+          years, I have had the opportunity to refine my skills and now, I am
+          excited to take things to the next level by offering my services to
+          others. The images you see on this page are just a small sample of my
+          work, the quality of the images have been dulled to have the images
+          render faster on this page but there is a whole page dedicated to
+          showcasing my photography, so feel free to explore and enjoy! If you
+          have any inquiries, want to connect, or just fancy a chat, do not
+          hesitate to reach out! You can contact me through my social media
+          platforms or send me an email at the very bottom.
         </motion.p>
       </div>
     </div>
