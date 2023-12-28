@@ -83,7 +83,7 @@ function ContactMe({}: Props) {
             className="flex items-center space-x-5 justify-center font-thin"
           >
             <MailIcon className="h-6 w-6 text-[#F7AB0A] animate-pulse" />
-            <p className="text-2xl">manavphotography20@gmail.com</p>
+            <p className="text-2xl pr-1">manavphotography20@gmail.com</p>
           </motion.div>
         </div>
 
@@ -91,7 +91,7 @@ function ContactMe({}: Props) {
           data-netlify="true"
           name="Photography-Contact"
           method="POST"
-          className="flex flex-col space-y-3 w-full md:w-auto mx-auto pt-3"
+          className="flex flex-col space-y-3 w-screen p-3 md:w-auto mx-auto pt-3"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
