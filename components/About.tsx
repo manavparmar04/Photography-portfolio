@@ -10,13 +10,6 @@ export default function About({}: Props) {
     "/images/aboutt.JPEG",
     "/images/about1.JPEG",
     "/images/about2.JPEG",
-    "/images/about4.JPG",
-    "/images/about5.JPG",
-    "/images/about6.JPG",
-    "/images/about7..JPG",
-    "/images/about8.JPEG",
-    "/images/about9.JPG",
-    "/images/about10.JPEG",
   ];
 
   useEffect(() => {
