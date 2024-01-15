@@ -29,6 +29,14 @@ function Projects({}: Props) {
     },
 
     {
+      imageSrc: "/images/sports.JPG",
+      title: "Sports",
+      description:
+        "Showcasing a collection of sports photography, capturing moments of different sports for a game to remember for both players and the viewers watching.  ",
+      Link: "https://drive.google.com/drive/folders/1XPGzxM4R999OKoQzmg_h-VRDr-280ngX?usp=share_link",
+    },
+
+    {
       imageSrc: "/images/pets.JPEG",
       title: "Pets",
       description:
