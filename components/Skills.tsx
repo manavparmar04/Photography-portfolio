@@ -56,7 +56,7 @@ const Services: React.FC = () => {
         "- Car Shots",
         "- Student Club Events",
       ],
-      cost: "Total Cost: $150",
+      cost: "Total Cost: $150 (Before tax)",
     },
     {
       name: "2 Hours",
@@ -70,7 +70,7 @@ const Services: React.FC = () => {
         "- Student Club Events",
         "‎ ",
       ],
-      cost: "Total Cost: $260",
+      cost: "Total Cost: $260 (Before tax)",
     },
     {
       name: "3 Hours",
@@ -84,7 +84,7 @@ const Services: React.FC = () => {
         "‎ ",
         "‎",
       ],
-      cost: "Total Cost: $320",
+      cost: "Total Cost: $320 (Before tax)",
     },
     {
       name: "All Day",
@@ -98,7 +98,7 @@ const Services: React.FC = () => {
         "- Corporate Events",
         "‎",
       ],
-      cost: "Total Cost: $450",
+      cost: "Total Cost: $450 (Before tax)",
     },
 
     {
